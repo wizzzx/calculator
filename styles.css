@@ -23,6 +23,10 @@ body {
 .display {
     width: 90%;
     height: 200px;
+    font-size: 50px;
+    color: white;
+    text-align: right;
+    margin-top: 50px;
 }
 
 .buttons-container {
@@ -52,3 +56,5 @@ body {
 .button-orange {
     background: #CC5500	;
 }
+
+
