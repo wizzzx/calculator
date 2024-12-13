@@ -1,28 +1,40 @@
-function add(firstNumber, secondNumber) {
-    const result = firstNumber + secondNumber;
-    return result;
+const calculator = document.getElementById('calculator');
+const buttons = document.querySelectorAll('button')
+const display = document.querySelector('.display');
+
+function add(a, b) {
+    return a + b
+
+}
+function subtract(a, b) {
+    return a - b
+
+}
+function multiply(a, b) {
+    return a * b
+
+}
+function divide(a, b) {
+    return a / b
+
 }
 
-function subtract(firstNumber, secondNumber) {
-    const result = firstNumber - secondNumber;
-    return result;
-}
+let a
+let b
+let operator
 
-function multiply(firstNumber, secondNumber) {
-    const result = firstNumber * secondNumber;
-    return result;
-}
+buttons.forEach((button) => {
+    const value = button.getAttribute('value');
+    const numericValue = Number(value);
 
-function divide(firstNumber, secondNumber) {
-    const result = firstNumber / secondNumber;
-    return result;
-}
+    if (!isNaN(numericValue) && numericValue >= 0 && numericValue <= 9) {
+        button.addEventListener('click', () => {
+            a = numericValue;
+            const displayedNumber = document.createElement('span')
+            displayedNumber.textContent = a;
+            display.appendChild(displayedNumber)
+        });
+    }
+});
 
-let firstInput;
-let secondInput;
-let operator;
-
-function operate(firstInput, secondInput, operator) {
-    if (operator.id === 'plus') {}
-}
 
