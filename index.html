@@ -10,28 +10,35 @@
 </head>
 <body>
     <div id="calculator">
-        <div class="display"></div>
-        <div class="buttons-container">
-            <button type="button" value="clear"  class="button button-grey" >AC</button>
-            <button class="button button-grey">+/-</button>
-            <button type="button" value="%" class="button button-grey" >%</button>
-            <button type="button" value="/" class="button button-orange" >/</button>
-            <button type="button" value="7" class="button button-dark-grey" >7</button>
-            <button type="button" value="8" class="button button-dark-grey" >8</button>
-            <button type="button" value="9" class="button button-dark-grey" >9</button>
-            <button type="button" value="*" class="button button-orange">*</button>
-            <button type="button" value="4" class="button button-dark-grey" >4</button>
-            <button type="button" value="5" class="button button-dark-grey" >5</button>
-            <button type="button" value="6" class="button button-dark-grey" >6</button>
-            <button type="button" value="-" class="button button-orange" >-</button>
-            <button type="button" value="1" class="button button-dark-grey" >1</button>
-            <button type="button" value="2" class="button button-dark-grey" >2</button>
-            <button type="button" value="3" class="button button-dark-grey" >3</button>
-            <button type="button" value="+" class="button button-orange" >+</button>
-            <button type="button" value="rewind" class="button button-dark-grey" >rewind icon</button>
-            <button type="button" value="0" class="button button-dark-grey" >0</button>
-            <button type="button" value="." class="button button-dark-grey" >.</button>
-            <button type="button" value="=" class="button button-orange" >=</button>
+        <div class="header_container">
+            <h1 class="header">calc</h1>
+            <div class="theme_selector">
+                <p>THEME</p>
+<!--               theme selector switch, will have to look for it online-->
+            </div>
+        </div>
+        <div id="display">
+
+        </div>
+        <div id="button-panel">
+            <button type="button" value="7" class="button">7</button>
+            <button type="button" value="8" class="button">8</button>
+            <button type="button" value="9" class="button">9</button>
+            <button type="button" value="delete" class="button button-gray">DEL</button>
+            <button type="button" value="4" class="button">4</button>
+            <button type="button" value="5" class="button">5</button>
+            <button type="button" value="6" class="button">6</button>
+            <button type="button" value="+" class="button">+</button>
+            <button type="button" value="1" class="button">1</button>
+            <button type="button" value="2" class="button">2</button>
+            <button type="button" value="3" class="button">3</button>
+            <button type="button" value="-" class="button">-</button>
+            <button type="button" value="." class="button">.</button>
+            <button type="button" value="0" class="button">0</button>
+            <button type="button" value="/" class="button">/</button>
+            <button type="button" value="*" class="button">x</button>
+            <button type="button" value="reset" class="button button-gray button-large">RESET</button>
+            <button type="button" value="equals" class="button button-orange button-large">=</button>
         </div>
     </div>
 </body>

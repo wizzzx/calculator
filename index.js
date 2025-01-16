@@ -1,37 +1,30 @@
-const calculator = document.getElementById('calculator');
-const buttons = document.querySelectorAll('button')
-const display = document.querySelector('.display');
+const calculator = document.querySelector('#calculator');
+const display = document.querySelector('#display');
+const buttonPanel = document.querySelector('#button-panel');
+const buttons = document.querySelectorAll('button');
 
-function add(a, b) {
-    return a + b
+let a
+let b
+let operator
 
+function renderOnDisplay(value) {
+    const input = document.createElement('span');
+    input.textContent = value;
+    display.appendChild(input);
 }
-function subtract(a, b) {
-    return a - b
-
-}
-function multiply(a, b) {
-    return a * b
-
-}
-function divide(a, b) {
-    return a / b
-
-}
-
-let a = ''
-let b = ''
-let operator = ''
 
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        const value = e.target.value
-
-
-
+        const buttonValue = e.target.value
+        renderOnDisplay(buttonValue);
     })
-});
+})
 
+
+
+function operate(a, b, operator) {
+
+}
 
 
 
