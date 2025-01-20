@@ -33,6 +33,12 @@
     width: 100%;
     padding: 40px;
     height: 200px;
+    display: flex;
+}
+
+.display_container {
+    display: flex;
+    flex-direction: column;
 }
 
 #button-panel {
