@@ -5,7 +5,7 @@ const buttons = document.querySelectorAll('button');
 const equals = document.querySelector('#equals');
 const del = document.querySelector('#del');
 const reset = document.querySelector('#reset');
-const displayResult = document.querySelector('#display');
+const displayResult = document.querySelector('#result');
 
 let a = ''
 let b = ''
@@ -48,6 +48,16 @@ buttons.forEach((button) => {
             operatorInput.textContent = operator
             display.appendChild(operatorInput)
             console.log(operator)
+        } else if (displayResult.textContent !== '' && operator && a !== '' && b !== '') {
+            a = Number(displayResult.textContent)
+            b = ''
+            operator = ''
+            display.innerHTML = ''
+            displayResult.innerHTML = ''
+            const firstInput = document.createElement('p')
+            firstInput.textContent = a
+            display.appendChild(firstInput)
+            return a
         } else {
             buttons.forEach((button) => {
                 button.addEventListener('click', (e) => {
@@ -71,6 +81,7 @@ reset.addEventListener('click', (e) => {
     b = ''
     operator = ''
     display.innerHTML = ''
+    displayResult.innerHTML = ''
 })
 
 del.addEventListener('click', (e) => {
